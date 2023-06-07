@@ -1,5 +1,5 @@
 //
-//  TabBarHomeInteractor.swift
+//  ProfileHomeInteractor.swift
 //  Pyonsnal-Color
 //
 //  Created by 조소정 on 2023/06/08.
@@ -7,35 +7,33 @@
 
 import ModernRIBs
 
-protocol TabBarHomeRouting: ViewableRouting {
+protocol ProfileHomeRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func attachTabs()
 }
 
-protocol TabBarHomePresentable: Presentable {
-    var listener: TabBarHomePresentableListener? { get set }
+protocol ProfileHomePresentable: Presentable {
+    var listener: ProfileHomePresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol TabBarHomeListener: AnyObject {
+protocol ProfileHomeListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class TabBarHomeInteractor: PresentableInteractor<TabBarHomePresentable>, TabBarHomeInteractable, TabBarHomePresentableListener {
+final class ProfileHomeInteractor: PresentableInteractor<ProfileHomePresentable>, ProfileHomeInteractable, ProfileHomePresentableListener {
 
-    weak var router: TabBarHomeRouting?
-    weak var listener: TabBarHomeListener?
+    weak var router: ProfileHomeRouting?
+    weak var listener: ProfileHomeListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: TabBarHomePresentable) {
+    override init(presenter: ProfileHomePresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        router?.attachTabs()
         // TODO: Implement business logic here.
     }
 

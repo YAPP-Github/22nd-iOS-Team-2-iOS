@@ -1,5 +1,5 @@
 //
-//  TabBarHomeInteractor.swift
+//  AppHomeInteractor.swift
 //  Pyonsnal-Color
 //
 //  Created by 조소정 on 2023/06/08.
@@ -7,35 +7,33 @@
 
 import ModernRIBs
 
-protocol TabBarHomeRouting: ViewableRouting {
+protocol AppHomeRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func attachTabs()
 }
 
-protocol TabBarHomePresentable: Presentable {
-    var listener: TabBarHomePresentableListener? { get set }
+protocol AppHomePresentable: Presentable {
+    var listener: AppHomePresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol TabBarHomeListener: AnyObject {
+protocol AppHomeListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class TabBarHomeInteractor: PresentableInteractor<TabBarHomePresentable>, TabBarHomeInteractable, TabBarHomePresentableListener {
+final class AppHomeInteractor: PresentableInteractor<AppHomePresentable>, AppHomeInteractable, AppHomePresentableListener {
 
-    weak var router: TabBarHomeRouting?
-    weak var listener: TabBarHomeListener?
+    weak var router: AppHomeRouting?
+    weak var listener: AppHomeListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: TabBarHomePresentable) {
+    override init(presenter: AppHomePresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        router?.attachTabs()
         // TODO: Implement business logic here.
     }
 

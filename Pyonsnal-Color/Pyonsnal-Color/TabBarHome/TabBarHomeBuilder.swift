@@ -12,7 +12,10 @@ protocol TabBarHomeDependency: Dependency {
     // created by this RIB.
 }
 
-final class TabBarHomeComponent: Component<TabBarHomeDependency> {
+final class TabBarHomeComponent: Component<TabBarHomeDependency>,
+                                 AppHomeDependency,
+                                 EventHomeDependency,
+                                 ProfileHomeDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -35,7 +38,15 @@ final class TabBarHomeBuilder: Builder<TabBarHomeDependency>, TabBarHomeBuildabl
         let interactor = TabBarHomeInteractor(presenter: viewController)
         
         //자식 리블렛 셋팅
+        let appHome = AppHomeBuilder(dependency: component)
+        let eventHome = EventHomeBuilder(dependency: component)
+        let profileHome = ProfileHomeBuilder(dependency: component)
+        
         interactor.listener = listener
-        return TabBarHomeRouter(interactor: interactor, viewController: viewController)
+        return TabBarHomeRouter(interactor: interactor,
+                                viewController: viewController,
+                                appHome: appHome,
+                                eventHome: eventHome,
+                                profileHome: profileHome)
     }
 }

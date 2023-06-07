@@ -46,10 +46,8 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
     
     func attachTabBarHomeRiB() {
         if tabBarHomeRouting != nil { return }
-        let tabBarHomeRouter = tabBarHomeBuilder.build(withListener: interactor)
-        let navigation = NavigationControllerable(root: tabBarHomeRouter.viewControllable)
-        
-        viewController.present(navigation, animated: true, completion: nil)
+        let tabBarHomeRouter = tabBarHomeBuilder.build(withListener: interactor)        
+        viewController.present(tabBarHomeRouter.viewControllable, animated: true, completion: nil)
         self.tabBarHomeRouting = tabBarHomeRouter
         attachChild(tabBarHomeRouter)
     }

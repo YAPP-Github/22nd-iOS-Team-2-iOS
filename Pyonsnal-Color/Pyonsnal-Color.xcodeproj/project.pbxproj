@@ -38,6 +38,18 @@
 		F0C223C72A30E37A000E9988 /* TabBarHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223C32A30E37A000E9988 /* TabBarHomeBuilder.swift */; };
 		F0C223C82A30E37A000E9988 /* TabBarHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223C42A30E37A000E9988 /* TabBarHomeInteractor.swift */; };
 		F0C223CB2A30E740000E9988 /* NavigationControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223CA2A30E740000E9988 /* NavigationControllable.swift */; };
+		F0C223D32A30E990000E9988 /* AppHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223CF2A30E990000E9988 /* AppHomeRouter.swift */; };
+		F0C223D42A30E990000E9988 /* AppHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223D02A30E990000E9988 /* AppHomeViewController.swift */; };
+		F0C223D52A30E990000E9988 /* AppHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223D12A30E990000E9988 /* AppHomeBuilder.swift */; };
+		F0C223D62A30E990000E9988 /* AppHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223D22A30E990000E9988 /* AppHomeInteractor.swift */; };
+		F0C223DB2A30E9A2000E9988 /* EventHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223D72A30E9A2000E9988 /* EventHomeRouter.swift */; };
+		F0C223DC2A30E9A2000E9988 /* EventHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223D82A30E9A2000E9988 /* EventHomeViewController.swift */; };
+		F0C223DD2A30E9A2000E9988 /* EventHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223D92A30E9A2000E9988 /* EventHomeBuilder.swift */; };
+		F0C223DE2A30E9A2000E9988 /* EventHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223DA2A30E9A2000E9988 /* EventHomeInteractor.swift */; };
+		F0C223E42A30E9B9000E9988 /* ProfileHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E02A30E9B9000E9988 /* ProfileHomeRouter.swift */; };
+		F0C223E52A30E9B9000E9988 /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E12A30E9B9000E9988 /* ProfileHomeViewController.swift */; };
+		F0C223E62A30E9B9000E9988 /* ProfileHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E22A30E9B9000E9988 /* ProfileHomeBuilder.swift */; };
+		F0C223E72A30E9B9000E9988 /* ProfileHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E32A30E9B9000E9988 /* ProfileHomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +83,18 @@
 		F0C223C32A30E37A000E9988 /* TabBarHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHomeBuilder.swift; sourceTree = "<group>"; };
 		F0C223C42A30E37A000E9988 /* TabBarHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHomeInteractor.swift; sourceTree = "<group>"; };
 		F0C223CA2A30E740000E9988 /* NavigationControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllable.swift; sourceTree = "<group>"; };
+		F0C223CF2A30E990000E9988 /* AppHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeRouter.swift; sourceTree = "<group>"; };
+		F0C223D02A30E990000E9988 /* AppHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeViewController.swift; sourceTree = "<group>"; };
+		F0C223D12A30E990000E9988 /* AppHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeBuilder.swift; sourceTree = "<group>"; };
+		F0C223D22A30E990000E9988 /* AppHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeInteractor.swift; sourceTree = "<group>"; };
+		F0C223D72A30E9A2000E9988 /* EventHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeRouter.swift; sourceTree = "<group>"; };
+		F0C223D82A30E9A2000E9988 /* EventHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeViewController.swift; sourceTree = "<group>"; };
+		F0C223D92A30E9A2000E9988 /* EventHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeBuilder.swift; sourceTree = "<group>"; };
+		F0C223DA2A30E9A2000E9988 /* EventHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeInteractor.swift; sourceTree = "<group>"; };
+		F0C223E02A30E9B9000E9988 /* ProfileHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeRouter.swift; sourceTree = "<group>"; };
+		F0C223E12A30E9B9000E9988 /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
+		F0C223E22A30E9B9000E9988 /* ProfileHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeBuilder.swift; sourceTree = "<group>"; };
+		F0C223E32A30E9B9000E9988 /* ProfileHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,12 +212,56 @@
 		F0C223C92A30E37F000E9988 /* TabBarHome */ = {
 			isa = PBXGroup;
 			children = (
+				F0C223E82A30E9BF000E9988 /* Tabs */,
 				F0C223C12A30E37A000E9988 /* TabBarHomeRouter.swift */,
 				F0C223C22A30E37A000E9988 /* TabBarHomeViewController.swift */,
 				F0C223C32A30E37A000E9988 /* TabBarHomeBuilder.swift */,
 				F0C223C42A30E37A000E9988 /* TabBarHomeInteractor.swift */,
 			);
 			path = TabBarHome;
+			sourceTree = "<group>";
+		};
+		F0C223CC2A30E94E000E9988 /* AppHome */ = {
+			isa = PBXGroup;
+			children = (
+				F0C223CF2A30E990000E9988 /* AppHomeRouter.swift */,
+				F0C223D02A30E990000E9988 /* AppHomeViewController.swift */,
+				F0C223D12A30E990000E9988 /* AppHomeBuilder.swift */,
+				F0C223D22A30E990000E9988 /* AppHomeInteractor.swift */,
+			);
+			path = AppHome;
+			sourceTree = "<group>";
+		};
+		F0C223CD2A30E972000E9988 /* EventHome */ = {
+			isa = PBXGroup;
+			children = (
+				F0C223D72A30E9A2000E9988 /* EventHomeRouter.swift */,
+				F0C223D82A30E9A2000E9988 /* EventHomeViewController.swift */,
+				F0C223D92A30E9A2000E9988 /* EventHomeBuilder.swift */,
+				F0C223DA2A30E9A2000E9988 /* EventHomeInteractor.swift */,
+			);
+			path = EventHome;
+			sourceTree = "<group>";
+		};
+		F0C223CE2A30E97B000E9988 /* ProfileHome */ = {
+			isa = PBXGroup;
+			children = (
+				F0C223E02A30E9B9000E9988 /* ProfileHomeRouter.swift */,
+				F0C223E12A30E9B9000E9988 /* ProfileHomeViewController.swift */,
+				F0C223E22A30E9B9000E9988 /* ProfileHomeBuilder.swift */,
+				F0C223E32A30E9B9000E9988 /* ProfileHomeInteractor.swift */,
+			);
+			path = ProfileHome;
+			sourceTree = "<group>";
+		};
+		F0C223E82A30E9BF000E9988 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				F0C223CC2A30E94E000E9988 /* AppHome */,
+				F0C223CD2A30E972000E9988 /* EventHome */,
+				F0C223CE2A30E97B000E9988 /* ProfileHome */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,25 +370,37 @@
 				F0C223CB2A30E740000E9988 /* NavigationControllable.swift in Sources */,
 				BA437F162A235F5100C5DFA8 /* LoggedOutRouter.swift in Sources */,
 				BAED88322A24C3E600DA6257 /* RootInteractor.swift in Sources */,
+				F0C223D62A30E990000E9988 /* AppHomeInteractor.swift in Sources */,
 				BAED88302A24C3E600DA6257 /* RootViewController.swift in Sources */,
 				F0C223C52A30E37A000E9988 /* TabBarHomeRouter.swift in Sources */,
 				F0C223BE2A30D8CA000E9988 /* LoggedInRouter.swift in Sources */,
 				F0C223C62A30E37A000E9988 /* TabBarHomeViewController.swift in Sources */,
 				F0C223C72A30E37A000E9988 /* TabBarHomeBuilder.swift in Sources */,
 				F0C223BF2A30D8CA000E9988 /* LoggedInBuilder.swift in Sources */,
+				F0C223DC2A30E9A2000E9988 /* EventHomeViewController.swift in Sources */,
 				BA437F182A235F5100C5DFA8 /* LoggedOutBuilder.swift in Sources */,
 				F0964E422A2A44500028DCA2 /* KeyChainService.swift in Sources */,
+				F0C223E52A30E9B9000E9988 /* ProfileHomeViewController.swift in Sources */,
 				BA9E233B2A21EF3000A539D5 /* AppDelegate.swift in Sources */,
 				BA437F212A2360E100C5DFA8 /* AppComponent.swift in Sources */,
 				B2A57C3F2A2EF917005DB83E /* KakaoLoginService.swift in Sources */,
+				F0C223DD2A30E9A2000E9988 /* EventHomeBuilder.swift in Sources */,
 				BA9E233D2A21EF3000A539D5 /* SceneDelegate.swift in Sources */,
 				BA437F172A235F5100C5DFA8 /* LoggedOutViewController.swift in Sources */,
 				F0C223BA2A30D738000E9988 /* RootComponent+LoggedIn.swift in Sources */,
 				F0C223C02A30D8CA000E9988 /* LoggedInInteractor.swift in Sources */,
 				BAED88342A24CB5E00DA6257 /* RootComponent+LoggedOut.swift in Sources */,
+				F0C223E72A30E9B9000E9988 /* ProfileHomeInteractor.swift in Sources */,
+				F0C223D52A30E990000E9988 /* AppHomeBuilder.swift in Sources */,
 				F0C223C82A30E37A000E9988 /* TabBarHomeInteractor.swift in Sources */,
+				F0C223E62A30E9B9000E9988 /* ProfileHomeBuilder.swift in Sources */,
+				F0C223E42A30E9B9000E9988 /* ProfileHomeRouter.swift in Sources */,
+				F0C223D32A30E990000E9988 /* AppHomeRouter.swift in Sources */,
 				BAED88312A24C3E600DA6257 /* RootBuilder.swift in Sources */,
+				F0C223DE2A30E9A2000E9988 /* EventHomeInteractor.swift in Sources */,
+				F0C223DB2A30E9A2000E9988 /* EventHomeRouter.swift in Sources */,
 				BAED882F2A24C3E600DA6257 /* RootRouter.swift in Sources */,
+				F0C223D42A30E990000E9988 /* AppHomeViewController.swift in Sources */,
 				F02C8DA72A2E149700593A2D /* AppleLoginService.swift in Sources */,
 				BA437F192A235F5100C5DFA8 /* LoggedOutInteractor.swift in Sources */,
 			);
