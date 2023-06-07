@@ -29,6 +29,10 @@
 		BAED88342A24CB5E00DA6257 /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED88332A24CB5E00DA6257 /* RootComponent+LoggedOut.swift */; };
 		F02C8DA72A2E149700593A2D /* AppleLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C8DA62A2E149700593A2D /* AppleLoginService.swift */; };
 		F0964E422A2A44500028DCA2 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0964E412A2A44500028DCA2 /* KeyChainService.swift */; };
+		F0C223BA2A30D738000E9988 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223B92A30D738000E9988 /* RootComponent+LoggedIn.swift */; };
+		F0C223BE2A30D8CA000E9988 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223BB2A30D8CA000E9988 /* LoggedInRouter.swift */; };
+		F0C223BF2A30D8CA000E9988 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223BC2A30D8CA000E9988 /* LoggedInBuilder.swift */; };
+		F0C223C02A30D8CA000E9988 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223BD2A30D8CA000E9988 /* LoggedInInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,10 @@
 		F02C8DA62A2E149700593A2D /* AppleLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
 		F0964E3D2A2A16D10028DCA2 /* Pyonsnal-Color.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pyonsnal-Color.entitlements"; sourceTree = "<group>"; };
 		F0964E412A2A44500028DCA2 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		F0C223B92A30D738000E9988 /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
+		F0C223BB2A30D8CA000E9988 /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		F0C223BC2A30D8CA000E9988 /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		F0C223BD2A30D8CA000E9988 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 				BAED882A2A24C3DA00DA6257 /* Root */,
 				BA437F092A2358BA00C5DFA8 /* Application */,
 				BA437F082A23583400C5DFA8 /* Resource */,
+				F0C223B02A30D4F9000E9988 /* LoggedIn */,
 				BA437F112A235ED700C5DFA8 /* LoggedOut */,
 				B2A57C3D2A2EF8FF005DB83E /* Service */,
 			);
@@ -149,8 +158,19 @@
 				BAED882D2A24C3E600DA6257 /* RootBuilder.swift */,
 				BAED882E2A24C3E600DA6257 /* RootInteractor.swift */,
 				BAED88332A24CB5E00DA6257 /* RootComponent+LoggedOut.swift */,
+				F0C223B92A30D738000E9988 /* RootComponent+LoggedIn.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		F0C223B02A30D4F9000E9988 /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				F0C223BB2A30D8CA000E9988 /* LoggedInRouter.swift */,
+				F0C223BC2A30D8CA000E9988 /* LoggedInBuilder.swift */,
+				F0C223BD2A30D8CA000E9988 /* LoggedInInteractor.swift */,
+			);
+			path = LoggedIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +279,8 @@
 				BA437F162A235F5100C5DFA8 /* LoggedOutRouter.swift in Sources */,
 				BAED88322A24C3E600DA6257 /* RootInteractor.swift in Sources */,
 				BAED88302A24C3E600DA6257 /* RootViewController.swift in Sources */,
+				F0C223BE2A30D8CA000E9988 /* LoggedInRouter.swift in Sources */,
+				F0C223BF2A30D8CA000E9988 /* LoggedInBuilder.swift in Sources */,
 				BA437F182A235F5100C5DFA8 /* LoggedOutBuilder.swift in Sources */,
 				F0964E422A2A44500028DCA2 /* KeyChainService.swift in Sources */,
 				BA9E233B2A21EF3000A539D5 /* AppDelegate.swift in Sources */,
@@ -266,6 +288,8 @@
 				B2A57C3F2A2EF917005DB83E /* KakaoLoginService.swift in Sources */,
 				BA9E233D2A21EF3000A539D5 /* SceneDelegate.swift in Sources */,
 				BA437F172A235F5100C5DFA8 /* LoggedOutViewController.swift in Sources */,
+				F0C223BA2A30D738000E9988 /* RootComponent+LoggedIn.swift in Sources */,
+				F0C223C02A30D8CA000E9988 /* LoggedInInteractor.swift in Sources */,
 				BAED88342A24CB5E00DA6257 /* RootComponent+LoggedOut.swift in Sources */,
 				BAED88312A24C3E600DA6257 /* RootBuilder.swift in Sources */,
 				BAED882F2A24C3E600DA6257 /* RootRouter.swift in Sources */,

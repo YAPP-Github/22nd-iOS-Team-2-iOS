@@ -8,6 +8,7 @@
 import ModernRIBs
 
 protocol RootRouting: ViewableRouting {
+    func routeToLoggedIn() //loggedOut 리블렛을 떼고 loggedIn 리블렛을 붙임
 }
 
 protocol RootPresentable: Presentable {
@@ -36,5 +37,9 @@ final class RootInteractor:
 
     override func willResignActive() {
         super.willResignActive()
+    }
+    
+    func didLogin() {
+        router?.routeToLoggedIn() //자식 리블렛 떼는 역할을 RootRouter로 전달
     }
 }

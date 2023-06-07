@@ -12,6 +12,12 @@ protocol RootPresentableListener: AnyObject {
 }
 
 final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
+    func dismiss(viewController: ViewControllable) {
+        if presentedViewController === viewController.uiviewController {
+            dismiss(animated: true)
+        }
+    }
+    
 
     // MARK: - Interface
     weak var listener: RootPresentableListener?
@@ -87,3 +93,6 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
         ])
     }
 }
+
+// MARK: - LoggedInViewControllable
+extension RootViewController: LoggedInViewControllable {}

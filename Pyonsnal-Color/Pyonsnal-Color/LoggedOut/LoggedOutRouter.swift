@@ -24,4 +24,5 @@ final class LoggedOutRouter:
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
+
 }

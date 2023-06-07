@@ -11,10 +11,13 @@ protocol RootDependency: Dependency {
 }
 
 final class RootComponent: Component<RootDependency> {
+    var rootViewController: RootViewController
     var appleLoginService: AppleLoginService
     
-    override init(dependency: RootDependency) {
+    init(dependency: RootDependency,
+         rootViewController: RootViewController) {
         self.appleLoginService = AppleLoginService()
+        self.rootViewController = rootViewController
         super.init(dependency: dependency)
     }
 }
@@ -32,15 +35,18 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     }
 
     func build() -> LaunchRouting {
-        let component: RootComponent = .init(dependency: dependency)
         let viewController: RootViewController = .init()
+        let component: RootComponent = .init(dependency: dependency,
+                                             rootViewController: viewController)
         let interactor: RootInteractor = .init(presenter: viewController)
 
         let loggedOutBuilder: LoggedOutBuilder = .init(dependency: component)
+        let loggedInBuilder: LoggedInBuilder = .init(dependency: component)
         let router: RootRouter = .init(
             interactor: interactor,
             viewController: viewController,
-            loggedOutBuilder: loggedOutBuilder
+            loggedOutBuilder: loggedOutBuilder,
+            loggedInBuilder: loggedInBuilder
         )
 
         return router

@@ -15,6 +15,7 @@ protocol LoggedOutPresentable: Presentable {
 }
 
 protocol LoggedOutListener: AnyObject {
+    func didLogin()
 }
 
 final class LoggedOutInteractor:
@@ -53,6 +54,7 @@ extension LoggedOutInteractor: AppleLoginServiceDelegate {
         /// get token from server
         /// save token to Keychain
         /// route to Home
+        listener?.didLogin()
     }
     
     
