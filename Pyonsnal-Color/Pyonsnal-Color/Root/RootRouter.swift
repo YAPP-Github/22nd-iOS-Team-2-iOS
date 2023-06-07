@@ -15,7 +15,7 @@ protocol RootInteractable: Interactable,
 }
 
 protocol RootViewControllable: ViewControllable {
-    func replaceModel(viewController: ViewControllable)
+    func present(viewController: ViewControllable)
     func dismiss(viewController: ViewControllable)
 }
 
@@ -50,9 +50,9 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 
     func routeToLoggedOut() {
         let loggedOut = loggedOutBuilder.build(withListener: interactor)
-        self.loggedOut = loggedOut
         attachChild(loggedOut)
-        viewController.replaceModel(viewController: loggedOut.viewControllable)
+        self.loggedOut = loggedOut
+        viewController.present(viewController: loggedOut.viewControllable)
     }
     
     func routeToLoggedIn() {
@@ -65,7 +65,7 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         
         //attach loggedIn
         let loggedIn = loggedInBuilder.build(withListener: interactor)
-        self.loggedIn = loggedIn
         attachChild(loggedIn)
+        self.loggedIn = loggedIn
     }
 }

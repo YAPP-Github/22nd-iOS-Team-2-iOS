@@ -14,7 +14,7 @@ protocol RootPresentableListener: AnyObject {
 final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
     func dismiss(viewController: ViewControllable) {
         if presentedViewController === viewController.uiviewController {
-            dismiss(animated: true)
+            dismiss(animated: true, completion: nil)
         }
     }
     
@@ -22,26 +22,30 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     // MARK: - Interface
     weak var listener: RootPresentableListener?
 
-    func replaceModel(viewController: ViewControllable) {
-        targetViewController = viewController
-
-        guard !animationInProgress else {
-            return
-        }
-
-        if presentedViewController != nil {
-            animationInProgress = true
-            dismiss(animated: true) { [weak self] in
-                if self?.targetViewController != nil {
-                    self?.presentTargetViewController()
-                } else {
-                    self?.animationInProgress = false
-                }
-            }
-        } else {
-            presentTargetViewController()
-        }
+    func present(viewController: ViewControllable) {
+        present(viewController.uiviewController, animated: true, completion: nil)
     }
+    
+//    func replaceModel(viewController: ViewControllable) {
+//        targetViewController = viewController
+//
+//        guard !animationInProgress else {
+//            return
+//        }
+//
+//        if presentedViewController != nil {
+//            animationInProgress = true
+//            dismiss(animated: true) { [weak self] in
+//                if self?.targetViewController != nil {
+//                    self?.presentTargetViewController()
+//                } else {
+//                    self?.animationInProgress = false
+//                }
+//            }
+//        } else {
+//            presentTargetViewController()
+//        }
+//    }
 
     // MARK: - UI Component
     private let label: UILabel = {
@@ -73,16 +77,16 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     }
 
     // MARK: - Private Method
-    private func presentTargetViewController() {
-        if let targetViewController {
-            animationInProgress = true
-            OperationQueue.main.addOperation {
-                self.present(targetViewController.uiviewController, animated: true) { [weak self] in
-                    self?.animationInProgress = false
-                }
-            }
-        }
-    }
+//    private func presentTargetViewController() {
+//        if let targetViewController {
+//            animationInProgress = true
+//            OperationQueue.main.addOperation {
+//                self.present(targetViewController.uiviewController, animated: true) { [weak self] in
+//                    self?.animationInProgress = false
+//                }
+//            }
+//        }
+//    }
 
     private func configureUI() {
         view.addSubview(label)
