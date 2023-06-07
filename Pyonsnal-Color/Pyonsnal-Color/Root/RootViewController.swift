@@ -99,4 +99,8 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
 }
 
 // MARK: - LoggedInViewControllable
-extension RootViewController: LoggedInViewControllable {}
+extension RootViewController: LoggedInViewControllable {
+    func present(_ viewController: UIViewController) {
+        viewController.present(viewController, animated: true)
+    }
+}

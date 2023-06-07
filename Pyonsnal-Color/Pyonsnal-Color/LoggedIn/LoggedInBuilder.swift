@@ -25,6 +25,8 @@ final class LoggedInComponent: Component<LoggedInDependency> {
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
+extension LoggedInComponent: TabBarHomeDependency {}
+
 // MARK: - Builder
 
 protocol LoggedInBuildable: Buildable {
@@ -39,9 +41,12 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
 
     func build(withListener listener: LoggedInListener) -> LoggedInRouting {
         let component = LoggedInComponent(dependency: dependency)
+        let tabBarHome = TabBarHomeBuilder(dependency: component)
+
         let interactor = LoggedInInteractor()
         interactor.listener = listener
         return LoggedInRouter(interactor: interactor,
-                              viewController: dependency.LoggedInViewController)
+                              viewController: dependency.LoggedInViewController,
+                              tabBarHomeBuilder: tabBarHome)
     }
 }

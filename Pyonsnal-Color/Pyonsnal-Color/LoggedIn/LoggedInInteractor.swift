@@ -9,6 +9,7 @@ import ModernRIBs
 
 protocol LoggedInRouting: Routing {
     func cleanupViews()
+    func attachTabBarHomeRiB()
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
@@ -27,6 +28,7 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
 
     override func didBecomeActive() {
         super.didBecomeActive()
+        router?.attachTabBarHomeRiB()
         // TODO: Implement business logic here.
     }
 
