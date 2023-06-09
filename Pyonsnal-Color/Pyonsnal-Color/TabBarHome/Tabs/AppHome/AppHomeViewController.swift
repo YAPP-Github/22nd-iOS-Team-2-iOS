@@ -20,21 +20,16 @@ final class AppHomeViewController: UIViewController,
 
     weak var listener: AppHomePresentableListener?
     
-    init() {
-      super.init(nibName: nil, bundle: nil)
-      
-      setupViews()
-    }
-    
-    required init?(coder: NSCoder) {
-      super.init(coder: coder)
-      
-      setupViews()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
     }
     
     private func setupViews() {
       title = "홈"
-      tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+      tabBarItem = UITabBarItem(title: "홈",
+                                image: UIImage(systemName: "house"),
+                                selectedImage: UIImage(systemName: "house.fill"))
       view.backgroundColor = .red
     }
 }

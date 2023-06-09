@@ -20,20 +20,11 @@ final class ProfileHomeViewController: UIViewController,
 
     weak var listener: ProfileHomePresentableListener?
     
-    init() {
-      super.init(nibName: nil, bundle: nil)
-      
-      setupViews()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "프로파일"
+        tabBarItem = UITabBarItem(title: "프로파일", image: UIImage(systemName: "person.crop.circle"), selectedImage: UIImage(systemName: "person.crop.circle.fill"))
+        view.backgroundColor = .brown
     }
     
-    required init?(coder: NSCoder) {
-      super.init(coder: coder)
-      setupViews()
-    }
-    
-    private func setupViews() {
-      title = "프로파일"
-      tabBarItem = UITabBarItem(title: "프로파일", image: UIImage(systemName: "person.crop.circle"), selectedImage: UIImage(systemName: "person.crop.circle.fill"))
-      view.backgroundColor = .brown
-    }
 }

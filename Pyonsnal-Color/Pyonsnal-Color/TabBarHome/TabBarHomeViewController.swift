@@ -22,7 +22,6 @@ final class TabBarHomeViewController: UITabBarController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
     }
     
     func setViewControllers(_ viewControllers: [ViewControllable]) {
