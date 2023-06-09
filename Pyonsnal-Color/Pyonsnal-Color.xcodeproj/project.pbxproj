@@ -50,6 +50,8 @@
 		F0C223E52A30E9B9000E9988 /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E12A30E9B9000E9988 /* ProfileHomeViewController.swift */; };
 		F0C223E62A30E9B9000E9988 /* ProfileHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E22A30E9B9000E9988 /* ProfileHomeBuilder.swift */; };
 		F0C223E72A30E9B9000E9988 /* ProfileHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E32A30E9B9000E9988 /* ProfileHomeInteractor.swift */; };
+		F0E886542A335F3C00D628EF /* ItemCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E886532A335F3C00D628EF /* ItemCardCell.swift */; };
+		F0E886582A33617200D628EF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F0E886572A33617200D628EF /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +97,7 @@
 		F0C223E12A30E9B9000E9988 /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
 		F0C223E22A30E9B9000E9988 /* ProfileHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeBuilder.swift; sourceTree = "<group>"; };
 		F0C223E32A30E9B9000E9988 /* ProfileHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeInteractor.swift; sourceTree = "<group>"; };
+		F0E886532A335F3C00D628EF /* ItemCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				BA437F072A2357DF00C5DFA8 /* ModernRIBs in Frameworks */,
 				B2A57BED2A2C7596005DB83E /* KakaoSDKCommon in Frameworks */,
 				B2A57BEB2A2C7596005DB83E /* KakaoSDKAuth in Frameworks */,
+				F0E886582A33617200D628EF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +243,7 @@
 				F0C223D82A30E9A2000E9988 /* EventHomeViewController.swift */,
 				F0C223D92A30E9A2000E9988 /* EventHomeBuilder.swift */,
 				F0C223DA2A30E9A2000E9988 /* EventHomeInteractor.swift */,
+				F0E886532A335F3C00D628EF /* ItemCardCell.swift */,
 			);
 			path = EventHome;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				B2A57BEA2A2C7596005DB83E /* KakaoSDKAuth */,
 				B2A57BEC2A2C7596005DB83E /* KakaoSDKCommon */,
 				B2A57BEE2A2C7596005DB83E /* KakaoSDKUser */,
+				F0E886572A33617200D628EF /* SnapKit */,
 			);
 			productName = "Pyonsnal-Color";
 			productReference = BA9E23372A21EF3000A539D5 /* Pyonsnal-Color.app */;
@@ -318,6 +324,7 @@
 			packageReferences = (
 				BA437F052A2357DF00C5DFA8 /* XCRemoteSwiftPackageReference "ModernRIBs" */,
 				B2A57BE92A2C7596005DB83E /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				F0E886562A33617200D628EF /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = BA9E23382A21EF3000A539D5 /* Products */;
 			projectDirPath = "";
@@ -391,6 +398,7 @@
 				F0C223C02A30D8CA000E9988 /* LoggedInInteractor.swift in Sources */,
 				BAED88342A24CB5E00DA6257 /* RootComponent+LoggedOut.swift in Sources */,
 				F0C223E72A30E9B9000E9988 /* ProfileHomeInteractor.swift in Sources */,
+				F0E886542A335F3C00D628EF /* ItemCardCell.swift in Sources */,
 				F0C223D52A30E990000E9988 /* AppHomeBuilder.swift in Sources */,
 				F0C223C82A30E37A000E9988 /* TabBarHomeInteractor.swift in Sources */,
 				F0C223E62A30E9B9000E9988 /* ProfileHomeBuilder.swift in Sources */,
@@ -632,6 +640,14 @@
 				minimumVersion = 1.0.2;
 			};
 		};
+		F0E886562A33617200D628EF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -654,6 +670,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BA437F052A2357DF00C5DFA8 /* XCRemoteSwiftPackageReference "ModernRIBs" */;
 			productName = ModernRIBs;
+		};
+		F0E886572A33617200D628EF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0E886562A33617200D628EF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
