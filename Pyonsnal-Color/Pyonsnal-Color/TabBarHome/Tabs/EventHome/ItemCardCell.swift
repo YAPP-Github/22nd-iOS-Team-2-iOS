@@ -176,5 +176,16 @@ final class ItemCardCell: UICollectionViewCell {
             $0.leading.trailing.bottom.equalToSuperview().inset(Constants.Size.priceContainerViewMargin)
         }
         
+        originalPriceLabel.snp.makeConstraints {
+            $0.top.leading.bottom.equalToSuperview()
+        }
+        
+        discountPriceLabel.snp.makeConstraints {
+            $0.leading.equalTo(originalPriceLabel.snp.trailing)
+            $0.top.trailing.bottom.equalToSuperview()
+        }
+        
+        
+        
     }
 }
