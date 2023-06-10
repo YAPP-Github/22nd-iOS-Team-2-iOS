@@ -52,6 +52,7 @@
 		F0C223E72A30E9B9000E9988 /* ProfileHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223E32A30E9B9000E9988 /* ProfileHomeInteractor.swift */; };
 		F0E886542A335F3C00D628EF /* ItemCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E886532A335F3C00D628EF /* ItemCardCell.swift */; };
 		F0E886582A33617200D628EF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F0E886572A33617200D628EF /* SnapKit */; };
+		F0E8865A2A34329900D628EF /* EventHomeSectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E886592A34329800D628EF /* EventHomeSectionLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		F0C223E22A30E9B9000E9988 /* ProfileHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeBuilder.swift; sourceTree = "<group>"; };
 		F0C223E32A30E9B9000E9988 /* ProfileHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeInteractor.swift; sourceTree = "<group>"; };
 		F0E886532A335F3C00D628EF /* ItemCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardCell.swift; sourceTree = "<group>"; };
+		F0E886592A34329800D628EF /* EventHomeSectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeSectionLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				F0C223D92A30E9A2000E9988 /* EventHomeBuilder.swift */,
 				F0C223DA2A30E9A2000E9988 /* EventHomeInteractor.swift */,
 				F0E886532A335F3C00D628EF /* ItemCardCell.swift */,
+				F0E886592A34329800D628EF /* EventHomeSectionLayout.swift */,
 			);
 			path = EventHome;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				BAED88322A24C3E600DA6257 /* RootInteractor.swift in Sources */,
 				F0C223D62A30E990000E9988 /* AppHomeInteractor.swift in Sources */,
 				BAED88302A24C3E600DA6257 /* RootViewController.swift in Sources */,
+				F0E8865A2A34329900D628EF /* EventHomeSectionLayout.swift in Sources */,
 				F0C223C52A30E37A000E9988 /* TabBarHomeRouter.swift in Sources */,
 				F0C223BE2A30D8CA000E9988 /* LoggedInRouter.swift in Sources */,
 				F0C223C62A30E37A000E9988 /* TabBarHomeViewController.swift in Sources */,

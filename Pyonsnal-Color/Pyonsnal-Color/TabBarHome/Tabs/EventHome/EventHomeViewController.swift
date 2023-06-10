@@ -44,7 +44,7 @@ final class EventHomeViewController: UIViewController,
     
     lazy var collectionView: UICollectionView = {
         var collectionView = UICollectionView(frame: .zero,
-                                              collectionViewLayout: UICollectionViewFlowLayout())
+                                              collectionViewLayout: createLayout())
         return collectionView
     }()
     
@@ -60,6 +60,10 @@ final class EventHomeViewController: UIViewController,
         itemCards = [
             ItemCard(imageUrl: dummyImage,
                      itemName: "산리오)햄치즈에그모닝머핀ddd",
+                     convinientStoreTagImage: dummyImage,
+                     eventTagImage: dummyImage),
+            ItemCard(imageUrl: dummyImage,
+                     itemName: "나가사끼 짬뽕",
                      convinientStoreTagImage: dummyImage,
                      eventTagImage: dummyImage),
             ItemCard(imageUrl: dummyImage,
@@ -113,7 +117,7 @@ final class EventHomeViewController: UIViewController,
     }
     
     private func makeSnapshot() {
-        var snapshot =  NSDiffableDataSourceSnapshot<SectionType, ItemType>()
+        var snapshot = NSDiffableDataSourceSnapshot<SectionType, ItemType>()
         let section = SectionType.item
         
         snapshot.appendSections([section])
@@ -123,6 +127,20 @@ final class EventHomeViewController: UIViewController,
         snapshot.appendItems(items, toSection: section)
         dataSource?.apply(snapshot, animatingDifferences: true)
     }
+    
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout {
+            [weak self] (sectionIndex, _) -> NSCollectionLayoutSection? in
+            guard let sectionIdentifier = self?.dataSource?.snapshot().sectionIdentifiers[sectionIndex] else {
+                return nil
+            }
+            
+            let layout = EventHomeSectionLayout()
+            return layout.section(at: sectionIdentifier)
+        }
+    }
+    
+    
 
 }
 
