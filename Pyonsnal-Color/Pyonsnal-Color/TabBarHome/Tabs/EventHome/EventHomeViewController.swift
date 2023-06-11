@@ -77,6 +77,8 @@ final class EventHomeViewController: UIViewController,
     }
     
     private func configureUI() {
+        //TO DO : fix color
+        collectionView.backgroundColor = .gray
         setNavigationView()
         setupCollectionView()
         setupViews()
