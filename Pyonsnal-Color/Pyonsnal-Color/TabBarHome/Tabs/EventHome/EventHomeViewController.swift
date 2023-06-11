@@ -73,7 +73,7 @@ final class EventHomeViewController: UIViewController,
                      convinientStoreTagImage: dummyImage,
                      eventTagImage: dummyImage),
         ]
-        eventUrls = ["test", "test2", "test3", "test4"]
+        eventUrls = ["test"]
     }
     
     private func configureUI() {

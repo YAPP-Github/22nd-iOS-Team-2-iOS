@@ -30,13 +30,13 @@ final class EventHomeSectionLayout {
     func section(at type: EventHomeViewController.SectionType) -> NSCollectionLayoutSection {
         switch type {
         case .event:
-            return eventLayout()
+            return eventLayout(isHeaderViewNeeded: true)
         case .item:
             return itemLayout()
         }
     }
     
-    private func eventLayout() -> NSCollectionLayoutSection {
+    func eventLayout(isHeaderViewNeeded: Bool) -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -44,10 +44,17 @@ final class EventHomeSectionLayout {
                                                heightDimension: .absolute(Size.Event.height))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-
+        if isHeaderViewNeeded {
+            group.contentInsets = NSDirectionalEdgeInsets(top: 0,
+                                                          leading: 16,
+                                                          bottom: 0,
+                                                          trailing: 16)
+        }
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.boundarySupplementaryItems = createSupplementaryView()
+        if isHeaderViewNeeded {
+            section.boundarySupplementaryItems = createSupplementaryView()
+        }
         return section
     }
 
@@ -59,12 +66,10 @@ final class EventHomeSectionLayout {
                                                heightDimension: .absolute(Size.Item.height))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
-
-        let spacing = CGFloat(16)
-        group.interItemSpacing = .fixed(spacing)
+        group.interItemSpacing = .fixed(Size.cellInterspacing)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.interGroupSpacing = spacing
+        section.interGroupSpacing = Size.cellInterspacing
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
         section.boundarySupplementaryItems = createSupplementaryView()
         return section

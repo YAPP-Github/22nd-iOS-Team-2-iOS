@@ -31,6 +31,7 @@
 		F02418822A34974000156AC5 /* ItemHeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02418812A34974000156AC5 /* ItemHeaderTitleView.swift */; };
 		F02418852A35C53200156AC5 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02418842A35C53200156AC5 /* String+.swift */; };
 		F02418872A35C93200156AC5 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02418862A35C93200156AC5 /* UIView+.swift */; };
+		F024188F2A35D7C600156AC5 /* EventBannerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024188E2A35D7C600156AC5 /* EventBannerItemCell.swift */; };
 		F02C8DA72A2E149700593A2D /* AppleLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C8DA62A2E149700593A2D /* AppleLoginService.swift */; };
 		F0964E422A2A44500028DCA2 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0964E412A2A44500028DCA2 /* KeyChainService.swift */; };
 		F0C223BA2A30D738000E9988 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223B92A30D738000E9988 /* RootComponent+LoggedIn.swift */; };
@@ -82,6 +83,7 @@
 		F02418812A34974000156AC5 /* ItemHeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHeaderTitleView.swift; sourceTree = "<group>"; };
 		F02418842A35C53200156AC5 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		F02418862A35C93200156AC5 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		F024188E2A35D7C600156AC5 /* EventBannerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBannerItemCell.swift; sourceTree = "<group>"; };
 		F02C8DA62A2E149700593A2D /* AppleLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
 		F0964E3D2A2A16D10028DCA2 /* Pyonsnal-Color.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pyonsnal-Color.entitlements"; sourceTree = "<group>"; };
 		F0964E412A2A44500028DCA2 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				F0E886532A335F3C00D628EF /* ItemCardCell.swift */,
 				F024187E2A34708D00156AC5 /* EventBannerCell.swift */,
 				F02418812A34974000156AC5 /* ItemHeaderTitleView.swift */,
+				F024188E2A35D7C600156AC5 /* EventBannerItemCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				F0C223DD2A30E9A2000E9988 /* EventHomeBuilder.swift in Sources */,
 				BA9E233D2A21EF3000A539D5 /* SceneDelegate.swift in Sources */,
 				BA437F172A235F5100C5DFA8 /* LoggedOutViewController.swift in Sources */,
+				F024188F2A35D7C600156AC5 /* EventBannerItemCell.swift in Sources */,
 				F0C223BA2A30D738000E9988 /* RootComponent+LoggedIn.swift in Sources */,
 				F0C223C02A30D8CA000E9988 /* LoggedInInteractor.swift in Sources */,
 				BAED88342A24CB5E00DA6257 /* RootComponent+LoggedOut.swift in Sources */,
