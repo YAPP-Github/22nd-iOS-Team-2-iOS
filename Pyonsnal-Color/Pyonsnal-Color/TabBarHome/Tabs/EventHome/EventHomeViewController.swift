@@ -41,6 +41,7 @@ final class EventHomeViewController: UIViewController,
     private var dataSource: UICollectionViewDiffableDataSource<SectionType, ItemType>?
     private var dummyImage = UIImage(systemName: "note")!
     private var itemCards: [ItemCard] = []
+    private var eventUrls: [String] = []
     
     lazy var collectionView: UICollectionView = {
         var collectionView = UICollectionView(frame: .zero,
@@ -53,6 +54,7 @@ final class EventHomeViewController: UIViewController,
         setupDummyData()
         configureUI()
         configureDatasource()
+        configureHeaderView()
         makeSnapshot()
     }
     
@@ -71,6 +73,7 @@ final class EventHomeViewController: UIViewController,
                      convinientStoreTagImage: dummyImage,
                      eventTagImage: dummyImage),
         ]
+        eventUrls = ["test", "test2", "test3", "test4"]
     }
     
     private func configureUI() {
@@ -89,7 +92,15 @@ final class EventHomeViewController: UIViewController,
     
     private func setupCollectionView() {
         collectionView.delegate = self
-        collectionView.backgroundColor = .blue
+        registerCollectionViewCells()
+    }
+    
+    private func registerCollectionViewCells() {
+        collectionView.register(ItemHeaderTitleView.self,
+                                forSupplementaryViewOfKind: "ItemHeaderTitleView",
+                                withReuseIdentifier: "ItemHeaderTitleView")
+        collectionView.register(EventBannerCell.self,
+                                forCellWithReuseIdentifier: "EventBannerCell")
         collectionView.register(ItemCardCell.self,
                                 forCellWithReuseIdentifier: "ItemCardCell")
     }
@@ -98,8 +109,7 @@ final class EventHomeViewController: UIViewController,
         view.addSubview(collectionView)
         
         collectionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(50)
-            $0.leading.trailing.bottom.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
     }
     
@@ -111,20 +121,45 @@ final class EventHomeViewController: UIViewController,
                                                                             for: indexPath) as? ItemCardCell
                 return cell ?? UICollectionViewCell()
             case .event(let item):
-                return UICollectionViewCell()
+                let cell: EventBannerCell? = collectionView.dequeueReusableCell(withReuseIdentifier: "EventBannerCell", for: indexPath) as? EventBannerCell
+                return cell ?? UICollectionViewCell()
             }
+        }
+    }
+    
+    private func configureHeaderView() {
+        dataSource?.supplementaryViewProvider = makeSupplementaryView
+    }
+    
+    private func makeSupplementaryView(collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+        switch kind {
+            case "ItemHeaderTitleView":
+            let itemHeaderTitleView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                                      withReuseIdentifier: kind,
+                                                                                      for: indexPath) as? ItemHeaderTitleView
+            itemHeaderTitleView?.update()
+            return itemHeaderTitleView
+        default:
+            return nil
         }
     }
     
     private func makeSnapshot() {
         var snapshot = NSDiffableDataSourceSnapshot<SectionType, ItemType>()
-        let section = SectionType.item
+        //append event section
+        snapshot.appendSections([.event])
+        let eventUrls = eventUrls.map { eventUrl in
+            return ItemType.event(data: eventUrl)
+        }
+        snapshot.appendItems(eventUrls, toSection: .event)
         
-        snapshot.appendSections([section])
-        let items = itemCards.map { itemCard in
+        //append item section
+        snapshot.appendSections([.item])
+        let itemCards = itemCards.map { itemCard in
             return ItemType.item(data: itemCard)
         }
-        snapshot.appendItems(items, toSection: section)
+        snapshot.appendItems(itemCards, toSection: .item)
+        
         dataSource?.apply(snapshot, animatingDifferences: true)
     }
     

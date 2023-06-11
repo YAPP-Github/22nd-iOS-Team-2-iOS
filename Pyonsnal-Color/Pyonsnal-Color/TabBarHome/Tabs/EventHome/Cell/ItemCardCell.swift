@@ -32,6 +32,7 @@ final class ItemCardCell: UICollectionViewCell {
             static let titleLabelMargin: CGFloat = 12
             
             static let priceContainerViewTop: CGFloat = 4
+            static let priceContainerViewHeight: CGFloat = 64
             static let priceContainerViewMargin: CGFloat = 12
         }
     }
@@ -39,6 +40,7 @@ final class ItemCardCell: UICollectionViewCell {
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = 0
         return stackView
     }()
     
@@ -114,9 +116,10 @@ final class ItemCardCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+
     private func configureUI() {
-        contentView.backgroundColor = .gray
         contentView.addSubview(stackView)
+        
         stackView.addArrangedSubview(contentImageView)
         stackView.addArrangedSubview(dividerView)
         stackView.addArrangedSubview(itemContainerView)
@@ -140,8 +143,6 @@ final class ItemCardCell: UICollectionViewCell {
         }
         
         dividerView.snp.makeConstraints {
-            $0.leading.equalTo(Constants.Size.dividerMargin)
-            $0.trailing.equalTo(Constants.Size.dividerMargin)
             $0.height.equalTo(Constants.Size.dividerHeight)
         }
         
@@ -150,7 +151,7 @@ final class ItemCardCell: UICollectionViewCell {
         }
         
         convinientImageTagView.snp.makeConstraints {
-            $0.leading.top.equalTo(Constants.Size.convinientImageViewMargin)
+            $0.top.leading.equalToSuperview().inset(Constants.Size.convinientImageViewMargin)
             $0.width.height.equalTo(Constants.Size.convinientImageViewWidth)
         }
         
@@ -176,6 +177,7 @@ final class ItemCardCell: UICollectionViewCell {
             $0.leading.trailing.bottom.equalToSuperview().inset(Constants.Size.priceContainerViewMargin)
         }
         
+        originalPriceLabel.snp.contentHuggingHorizontalPriority = 251
         originalPriceLabel.snp.makeConstraints {
             $0.top.leading.bottom.equalToSuperview()
         }
