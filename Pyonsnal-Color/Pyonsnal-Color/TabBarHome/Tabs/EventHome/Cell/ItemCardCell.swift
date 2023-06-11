@@ -15,7 +15,7 @@ final class ItemCardCell: UICollectionViewCell {
             static let dividerMargin: CGFloat = 12
             static let dividerHeight: CGFloat = 1
             
-            static let contentImageViewHeight: CGFloat = 100
+            static let contentImageViewHeight: CGFloat = 171
             
             static let containerViewHeight: CGFloat = 64
             static let convinientImageViewMargin: CGFloat = 12
@@ -34,6 +34,8 @@ final class ItemCardCell: UICollectionViewCell {
             static let priceContainerViewTop: CGFloat = 4
             static let priceContainerViewHeight: CGFloat = 64
             static let priceContainerViewMargin: CGFloat = 12
+            
+            static let cornerRadius: CGFloat = 16
         }
     }
     
@@ -109,6 +111,7 @@ final class ItemCardCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         configureUI()
+        setLayout()
         
     }
     
@@ -116,8 +119,12 @@ final class ItemCardCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-
     private func configureUI() {
+        self.makeRounded(with: Constants.Size.cornerRadius)
+        discountPriceLabel.attributedText = discountPriceLabel.text?.strikeThrough(with: UIColor.red)
+    }
+    
+    private func setLayout() {
         contentView.addSubview(stackView)
         
         stackView.addArrangedSubview(contentImageView)
@@ -144,10 +151,6 @@ final class ItemCardCell: UICollectionViewCell {
         
         dividerView.snp.makeConstraints {
             $0.height.equalTo(Constants.Size.dividerHeight)
-        }
-        
-        itemContainerView.snp.makeConstraints {
-            $0.height.equalTo(Constants.Size.containerViewHeight)
         }
         
         convinientImageTagView.snp.makeConstraints {

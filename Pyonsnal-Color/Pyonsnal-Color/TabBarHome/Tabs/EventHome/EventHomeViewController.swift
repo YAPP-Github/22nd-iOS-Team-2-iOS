@@ -147,18 +147,22 @@ final class EventHomeViewController: UIViewController,
     private func makeSnapshot() {
         var snapshot = NSDiffableDataSourceSnapshot<SectionType, ItemType>()
         //append event section
-        snapshot.appendSections([.event])
-        let eventUrls = eventUrls.map { eventUrl in
-            return ItemType.event(data: eventUrl)
+        if !eventUrls.isEmpty {
+            snapshot.appendSections([.event])
+            let eventUrls = eventUrls.map { eventUrl in
+                return ItemType.event(data: eventUrl)
+            }
+            snapshot.appendItems(eventUrls, toSection: .event)
         }
-        snapshot.appendItems(eventUrls, toSection: .event)
         
         //append item section
-        snapshot.appendSections([.item])
-        let itemCards = itemCards.map { itemCard in
-            return ItemType.item(data: itemCard)
+        if !itemCards.isEmpty {
+            snapshot.appendSections([.item])
+            let itemCards = itemCards.map { itemCard in
+                return ItemType.item(data: itemCard)
+            }
+            snapshot.appendItems(itemCards, toSection: .item)
         }
-        snapshot.appendItems(itemCards, toSection: .item)
         
         dataSource?.apply(snapshot, animatingDifferences: true)
     }

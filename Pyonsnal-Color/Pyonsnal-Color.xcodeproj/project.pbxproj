@@ -27,6 +27,10 @@
 		BAED88312A24C3E600DA6257 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED882D2A24C3E600DA6257 /* RootBuilder.swift */; };
 		BAED88322A24C3E600DA6257 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED882E2A24C3E600DA6257 /* RootInteractor.swift */; };
 		BAED88342A24CB5E00DA6257 /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED88332A24CB5E00DA6257 /* RootComponent+LoggedOut.swift */; };
+		F024187F2A34708D00156AC5 /* EventBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024187E2A34708D00156AC5 /* EventBannerCell.swift */; };
+		F02418822A34974000156AC5 /* ItemHeaderTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02418812A34974000156AC5 /* ItemHeaderTitleView.swift */; };
+		F02418852A35C53200156AC5 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02418842A35C53200156AC5 /* String+.swift */; };
+		F02418872A35C93200156AC5 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02418862A35C93200156AC5 /* UIView+.swift */; };
 		F02C8DA72A2E149700593A2D /* AppleLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C8DA62A2E149700593A2D /* AppleLoginService.swift */; };
 		F0964E422A2A44500028DCA2 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0964E412A2A44500028DCA2 /* KeyChainService.swift */; };
 		F0C223BA2A30D738000E9988 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C223B92A30D738000E9988 /* RootComponent+LoggedIn.swift */; };
@@ -74,6 +78,10 @@
 		BAED882D2A24C3E600DA6257 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		BAED882E2A24C3E600DA6257 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		BAED88332A24CB5E00DA6257 /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		F024187E2A34708D00156AC5 /* EventBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBannerCell.swift; sourceTree = "<group>"; };
+		F02418812A34974000156AC5 /* ItemHeaderTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHeaderTitleView.swift; sourceTree = "<group>"; };
+		F02418842A35C53200156AC5 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		F02418862A35C93200156AC5 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		F02C8DA62A2E149700593A2D /* AppleLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
 		F0964E3D2A2A16D10028DCA2 /* Pyonsnal-Color.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pyonsnal-Color.entitlements"; sourceTree = "<group>"; };
 		F0964E412A2A44500028DCA2 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 		BA9E23392A21EF3000A539D5 /* Pyonsnal-Color */ = {
 			isa = PBXGroup;
 			children = (
+				F02418832A35C52900156AC5 /* Extensions */,
 				F0C223C92A30E37F000E9988 /* TabBarHome */,
 				F0964E3D2A2A16D10028DCA2 /* Pyonsnal-Color.entitlements */,
 				BAED882A2A24C3DA00DA6257 /* Root */,
@@ -203,6 +212,25 @@
 				F0C223B92A30D738000E9988 /* RootComponent+LoggedIn.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		F02418802A34709300156AC5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0E886532A335F3C00D628EF /* ItemCardCell.swift */,
+				F024187E2A34708D00156AC5 /* EventBannerCell.swift */,
+				F02418812A34974000156AC5 /* ItemHeaderTitleView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F02418832A35C52900156AC5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F02418842A35C53200156AC5 /* String+.swift */,
+				F02418862A35C93200156AC5 /* UIView+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F0C223B02A30D4F9000E9988 /* LoggedIn */ = {
@@ -241,11 +269,11 @@
 		F0C223CD2A30E972000E9988 /* EventHome */ = {
 			isa = PBXGroup;
 			children = (
+				F02418802A34709300156AC5 /* Cell */,
 				F0C223D72A30E9A2000E9988 /* EventHomeRouter.swift */,
 				F0C223D82A30E9A2000E9988 /* EventHomeViewController.swift */,
 				F0C223D92A30E9A2000E9988 /* EventHomeBuilder.swift */,
 				F0C223DA2A30E9A2000E9988 /* EventHomeInteractor.swift */,
-				F0E886532A335F3C00D628EF /* ItemCardCell.swift */,
 				F0E886592A34329800D628EF /* EventHomeSectionLayout.swift */,
 			);
 			path = EventHome;
@@ -381,6 +409,7 @@
 				BA437F162A235F5100C5DFA8 /* LoggedOutRouter.swift in Sources */,
 				BAED88322A24C3E600DA6257 /* RootInteractor.swift in Sources */,
 				F0C223D62A30E990000E9988 /* AppHomeInteractor.swift in Sources */,
+				F02418852A35C53200156AC5 /* String+.swift in Sources */,
 				BAED88302A24C3E600DA6257 /* RootViewController.swift in Sources */,
 				F0E8865A2A34329900D628EF /* EventHomeSectionLayout.swift in Sources */,
 				F0C223C52A30E37A000E9988 /* TabBarHomeRouter.swift in Sources */,
@@ -403,12 +432,15 @@
 				BAED88342A24CB5E00DA6257 /* RootComponent+LoggedOut.swift in Sources */,
 				F0C223E72A30E9B9000E9988 /* ProfileHomeInteractor.swift in Sources */,
 				F0E886542A335F3C00D628EF /* ItemCardCell.swift in Sources */,
+				F024187F2A34708D00156AC5 /* EventBannerCell.swift in Sources */,
 				F0C223D52A30E990000E9988 /* AppHomeBuilder.swift in Sources */,
 				F0C223C82A30E37A000E9988 /* TabBarHomeInteractor.swift in Sources */,
+				F02418872A35C93200156AC5 /* UIView+.swift in Sources */,
 				F0C223E62A30E9B9000E9988 /* ProfileHomeBuilder.swift in Sources */,
 				F0C223E42A30E9B9000E9988 /* ProfileHomeRouter.swift in Sources */,
 				F0C223D32A30E990000E9988 /* AppHomeRouter.swift in Sources */,
 				BAED88312A24C3E600DA6257 /* RootBuilder.swift in Sources */,
+				F02418822A34974000156AC5 /* ItemHeaderTitleView.swift in Sources */,
 				F0C223DE2A30E9A2000E9988 /* EventHomeInteractor.swift in Sources */,
 				F0C223DB2A30E9A2000E9988 /* EventHomeRouter.swift in Sources */,
 				BAED882F2A24C3E600DA6257 /* RootRouter.swift in Sources */,
