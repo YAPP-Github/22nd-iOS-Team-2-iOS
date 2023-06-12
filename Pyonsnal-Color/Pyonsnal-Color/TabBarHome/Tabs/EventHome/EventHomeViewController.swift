@@ -124,6 +124,7 @@ final class EventHomeViewController: UIViewController,
                 return cell ?? UICollectionViewCell()
             case .event(let item):
                 let cell: EventBannerCell? = collectionView.dequeueReusableCell(withReuseIdentifier: "EventBannerCell", for: indexPath) as? EventBannerCell
+                cell?.update(self.eventUrls)
                 return cell ?? UICollectionViewCell()
             }
         }

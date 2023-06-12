@@ -30,13 +30,13 @@ final class EventHomeSectionLayout {
     func section(at type: EventHomeViewController.SectionType) -> NSCollectionLayoutSection {
         switch type {
         case .event:
-            return eventLayout(isHeaderViewNeeded: true)
+            return eventLayout()
         case .item:
             return itemLayout()
         }
     }
     
-    func eventLayout(isHeaderViewNeeded: Bool) -> NSCollectionLayoutSection {
+    func eventLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -44,17 +44,13 @@ final class EventHomeSectionLayout {
                                                heightDimension: .absolute(Size.Event.height))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        if isHeaderViewNeeded {
-            group.contentInsets = NSDirectionalEdgeInsets(top: 0,
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0,
                                                           leading: 16,
                                                           bottom: 0,
                                                           trailing: 16)
-        }
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        if isHeaderViewNeeded {
-            section.boundarySupplementaryItems = createSupplementaryView()
-        }
+        section.boundarySupplementaryItems = createSupplementaryView()
         return section
     }
 
